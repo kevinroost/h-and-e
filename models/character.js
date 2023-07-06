@@ -5,10 +5,12 @@ const Schema = mongoose.Schema
 
 const characterSchema = new Schema({
   name: String,
+  species: {type: Schema.Types.ObjectId, ref: 'Species'},
   level: Number,
   inventory: [{type: Schema.Types.ObjectId, ref: 'Item'}],
   equipped: [{type: Schema.Types.ObjectId, ref: 'Item'}],
-  stats: [Stat]
+  stats: [Stat],
+  isInjured: Boolean
 },{
   timestamps: true,
 })
