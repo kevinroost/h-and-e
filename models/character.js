@@ -10,7 +10,7 @@ const characterSchema = new Schema({
   inventory: [{type: Schema.Types.ObjectId, ref: 'Item'}],
   equipped: [{type: Schema.Types.ObjectId, ref: 'Item'}],
   stats: [Stat],
-  isInjured: Boolean
+  isInjured: {type: Boolean, default: false}
 },{
   timestamps: true,
 })
