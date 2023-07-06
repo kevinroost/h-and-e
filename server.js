@@ -1,5 +1,4 @@
 // npm packages
-import "dotenv/config"
 import 'dotenv/config.js'
 import express from 'express'
 import logger from 'morgan'
