@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const statSchema = new Schema({
   attribute: String,
-  points: {type: Number, default: 6}
+  points: Number
 })
 
 const Stat = mongoose.model('Stat', statSchema)

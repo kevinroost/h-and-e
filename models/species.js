@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import { Stat } from './stat'
-import { Skill } from './skills'
+import { Skill } from './skill'
 
 const Schema = mongoose.Schema
 
