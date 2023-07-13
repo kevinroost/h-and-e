@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { Stat } from './stat'
+import { Stat } from './stat.js'
 
 const Schema = mongoose.Schema
 

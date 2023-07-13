@@ -1,14 +1,14 @@
 import mongoose from 'mongoose'
-import { Stat } from './stat'
-import { Skill } from './skill'
+import { statSchema } from './stat.js'
+import { skillSchema } from './skill.js'
 
 const Schema = mongoose.Schema
 
 const speciesSchema = new Schema({
   name: String,
   speed: Number,
-  statBonuses: [Stat],
-  skillBonuses: [Skill]
+  statBonuses: [statSchema],
+  skillBonuses: [skillSchema]
 })
 
 const Species = mongoose.model('Species', speciesSchema)

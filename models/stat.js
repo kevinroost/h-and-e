@@ -9,4 +9,4 @@ const statSchema = new Schema({
 
 const Stat = mongoose.model('Stat', statSchema)
 
-export { Stat }
+export { statSchema, Stat }
