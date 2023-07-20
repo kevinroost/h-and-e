@@ -12,6 +12,7 @@ import './config/database.js'
 import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as speciesRouter } from './routes/species.js'
+import { router as itemsRouter } from './routes/items.js'
 
 // create the express app
 const app = express()
@@ -26,6 +27,8 @@ app.use(formData.parse())
 app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/species', speciesRouter)
+app.use('/api/items', itemsRouter)
+
 
 // handle 404 errors
 app.use(function (req, res, next) {

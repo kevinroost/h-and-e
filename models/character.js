@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { Stat } from './stat.js'
+import { statSchema } from './stat.js'
 
 const Schema = mongoose.Schema
 
@@ -9,7 +9,7 @@ const characterSchema = new Schema({
   level: Number,
   inventory: [{type: Schema.Types.ObjectId, ref: 'Item'}],
   equipped: [{type: Schema.Types.ObjectId, ref: 'Item'}],
-  stats: [Stat],
+  stats: [statSchema],
   speed: Number,
   isInjured: {type: Boolean, default: false}
 },{

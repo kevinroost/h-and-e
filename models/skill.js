@@ -4,10 +4,15 @@ const Schema = mongoose.Schema
 
 const skillSchema = new Schema({
   name: String,
-  governingStat: {type: Schema.Types.ObjectId, ref: 'Stat'}, 
+  governingStat: {
+    type: String,
+    Enum: ['Strength', 'Dexterity', 'Constitution', 'Wisdom', 'Intelligence'],
+  }, 
     //skill mod value = Math.floor(baseStatValue/2) - 5
-    //dynamically point to user's character stat._id
-  training: Number, //null until trained
+  training: { //null until trained
+    type: Number,
+    max: 6
+  },
   totalMod: Number //null until trained
 })
 
