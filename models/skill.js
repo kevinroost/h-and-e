@@ -12,8 +12,7 @@ const skillSchema = new Schema({
   training: { //null until trained
     type: Number,
     max: 6
-  },
-  totalMod: Number //null until trained
+  }
 })
 
 const Skill = mongoose.model('Skill', skillSchema)
