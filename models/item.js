@@ -17,7 +17,8 @@ const itemSchema = new Schema({
   check: {
     skill: String,
     dc: Number
-  }
+  },
+  uses: Number
 })
 
 const Item = mongoose.model('Item', itemSchema)
