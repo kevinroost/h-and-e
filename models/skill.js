@@ -4,15 +4,15 @@ const Schema = mongoose.Schema
 
 const skillSchema = new Schema({
   name: String,
-  governingStat: {
+  governingStat: {//skill mod value = Math.floor(baseStatValue/2) - 5
     type: String,
     Enum: ['Strength', 'Dexterity', 'Constitution', 'Wisdom', 'Intelligence'],
   }, 
-    //skill mod value = Math.floor(baseStatValue/2) - 5
   training: { //null until trained
     type: Number,
     max: 6
-  }
+  },
+  buffedBy: [{type: Schema.Types.ObjectId, ref: 'Item'}]
 })
 
 const Skill = mongoose.model('Skill', skillSchema)
