@@ -15,7 +15,7 @@ const itemSchema = new Schema({
   buffStat: [statSchema],
   buffSkill: [skillSchema],
   check: {
-    skill: String,
+    skill: [String],
     dc: Number
   },
   uses: Number
