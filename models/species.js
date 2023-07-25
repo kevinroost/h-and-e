@@ -8,7 +8,7 @@ const speciesSchema = new Schema({
   name: String,
   speed: Number,
   statBonuses: [statSchema],
-  skillBonuses: [skillSchema]
+  skillBonuses: [skillSchema] //object!, objectID to skill and number to buff. No more skillSchema
 })
 
 const Species = mongoose.model('Species', speciesSchema)
