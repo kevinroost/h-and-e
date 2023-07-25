@@ -10,6 +10,14 @@ const characterSchema = new Schema({
   inventory: [{type: Schema.Types.ObjectId, ref: 'Item'}],
   equipped: [{type: Schema.Types.ObjectId, ref: 'Item'}],
   stats: [statSchema],
+  skills: [{
+    skill: {type: Schema.Types.ObjectId, ref: 'Skill'},
+    training: {
+      type: Number,
+      max: 6,
+      default: 0
+    }
+  }],
   speed: Number,
   isInjured: {type: Boolean, default: false}
 },{

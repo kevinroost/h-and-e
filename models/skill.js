@@ -8,11 +8,12 @@ const skillSchema = new Schema({
     type: String,
     Enum: ['Strength', 'Dexterity', 'Constitution', 'Wisdom', 'Intelligence'],
   }, 
-  training: { //null until trained
-    type: Number,
-    max: 6
-  },
-  buffedBy: [{type: Schema.Types.ObjectId, ref: 'Item'}]
+  buffedBy: [
+    {
+      item: {type: Schema.Types.ObjectId, ref: 'Item'},
+      buff: Number
+    }
+  ]
 })
 
 const Skill = mongoose.model('Skill', skillSchema)

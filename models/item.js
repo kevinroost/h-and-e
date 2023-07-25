@@ -13,7 +13,6 @@ const itemSchema = new Schema({
   reqItem: [{type: Schema.Types.ObjectId, ref: 'Item'}],
   reqStat: [statSchema],
   buffStat: [statSchema],
-  buffSkill: String,
   check: {
     skill: [String],
     dc: Number
